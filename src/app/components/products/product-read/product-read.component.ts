@@ -11,14 +11,24 @@ export class ProductReadComponent implements OnInit {
 
   products: product[];
 
-  displayedColumns = ['id', 'name', 'price'];
+  displayedColumns = ['id', 'name', 'price', 'action'];
 
   constructor(private productServicervice: ProductServicervice) { }
 
   ngOnInit(): void {
+    this.readData();
+  }
+
+  readData(){
     this.productServicervice.read().subscribe((product) => {
       this.products = product;
-      console.log(product);
+    });
+  }
+
+  delete(id: string){
+    this.productServicervice.delete(id).subscribe(() => {
+      this.productServicervice.showMenssage("Produto excluido com sucesso");
+      this.readData();
     });
   }
 }
