@@ -1,5 +1,5 @@
 <div class="mat-elevation-z4">
-    <table mat-table [dataSource]="products">
+    <table mat-table [dataSource]="mutationData">
       <!-- Id Column -->
       <ng-container matColumnDef="id">
         <th mat-header-cell *matHeaderCellDef>Id</th>
@@ -36,4 +36,11 @@
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
+    <mat-paginator #paginator
+      [length]="products ? products.length : 0"
+      [pageIndex]="0"
+      [pageSize]="5"
+      [pageSizeOptions]="[5, 10, 25, 50, 100, 250]"
+      (page)="getPageEvent($event)">
+    </mat-paginator>
   </div>

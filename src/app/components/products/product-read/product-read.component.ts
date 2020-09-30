@@ -1,6 +1,7 @@
 import { ProductServicervice } from './../product.service';
 import { product } from './../products.model';
 import { Component, OnInit } from '@angular/core';
+import { PageEvent } from '@angular/material/paginator';
 
 @Component({
   selector: 'app-product-read',
@@ -10,6 +11,8 @@ import { Component, OnInit } from '@angular/core';
 export class ProductReadComponent implements OnInit {
 
   products: product[];
+
+  mutationData: product[];
 
   displayedColumns = ['id', 'name', 'price', 'action'];
 
@@ -22,6 +25,7 @@ export class ProductReadComponent implements OnInit {
   readData(){
     this.productServicervice.read().subscribe((product) => {
       this.products = product;
+      this.mutationData = product.slice(0, 5);
     });
   }
 
@@ -30,5 +34,10 @@ export class ProductReadComponent implements OnInit {
       this.productServicervice.showMenssage("Produto excluido com sucesso");
       this.readData();
     });
+  }
+
+  getPageEvent(event: PageEvent){
+    const startIndex = event.pageIndex * event.pageSize;
+    this.mutationData = this.products.slice(startIndex, startIndex + event.pageSize);
   }
 }
