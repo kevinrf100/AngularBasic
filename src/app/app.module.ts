@@ -29,11 +29,17 @@ import { ProductRead2Component } from './components/products/product-read2/produ
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort'
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatDialogModule } from '@angular/material/dialog'
 
 import localePt from '@angular/common/locales/pt'
 import { registerLocaleData } from '@angular/common';
 import { ProductUpdateComponent } from './components/products/product-update/product-update.component';
-import { ProductDeleteComponent } from './components/products/product-delete/product-delete.component'
+import { ProductDeleteComponent } from './components/products/product-delete/product-delete.component';
+import { ResposividadeHeaderComponent } from './views/resposividade-header/resposividade-header.component';
+import { EdicaoComponent } from './views/edicao/edicao.component';
+import { BotoaComponent } from './components/botoa/botoa.component';
+import { TesteCssClearComponent } from './views/teste-css-clear/teste-css-clear.component'
 
 registerLocaleData(localePt);
 
@@ -49,7 +55,11 @@ registerLocaleData(localePt);
     ProductReadComponent,
     ProductRead2Component,
     ProductUpdateComponent,
-    ProductDeleteComponent
+    ProductDeleteComponent,
+    ResposividadeHeaderComponent,
+    EdicaoComponent,
+    BotoaComponent,
+    TesteCssClearComponent
   ],
   imports: [
     BrowserModule,
@@ -68,6 +78,8 @@ registerLocaleData(localePt);
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
+    MatTooltipModule,
+    MatDialogModule
   ],
   providers: [
     {

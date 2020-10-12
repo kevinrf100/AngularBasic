@@ -1,6 +1,10 @@
 .header {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
+    width: 100vw;
+    height: auto;
 }
 
 .header a {
@@ -9,18 +13,68 @@
     text-decoration: none;
 }
 
-.header .logo {
-    max-height: 32px;
+.header .logoBar {
+    width: auto;
+    max-width: 50%;
+}
+
+.header .logoBar .logo {
+    width: 100%;
+    min-width: 100px;
+}
+
+.header .title-group .profileImage {
+    width: auto;
+}
+
+.header .title-group .profileImage img {
+    width: 10rem;
+    height: 10rem;
+    max-width: 100px;
+    max-height: 110px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
 }
 
 .header .title-group {
-    padding-left: 1.2rem;
+    display: flex;
+    flex-direction: row;
 }
 
 .header .title-group i{
     padding-right: 1.2rem;
 }
 
+.infos {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
 span a{
     color: white;
+    display: block;
+    word-wrap: break-word;
 }
+
+@media only screen and (max-width: 500px) {
+    span a{
+        color: white;
+        display: block;
+        word-wrap: break-word;
+        font-size: 50%;
+    }
+    .header .title-group .profileImage {
+        width: auto;
+    }
+    .header .title-group .profileImage img {
+        max-width: 100%;
+        height: auto;
+        /*max-width: 100px;*/
+        min-width: 52px;
+        min-height: 52px;
+        max-height: 110px;
+        border-radius: 50%;
+        margin-right: 0.5rem;
+    }
+  }

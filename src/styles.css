@@ -21,3 +21,16 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background:
     background-color: red;
     color: white;
 }
+
+button.save {
+    margin-right: 0.3rem;
+}
+
+:root {
+    --background-color: rgb(179, 168, 168);
+    --border-gray-color: rgb(19, 19, 19);
+    --font-title-size: 18px;
+    --font-subtitle-size: 1rem;
+    --font-paragrafo-size: 14px;
+    --font-black-color: black;
+}

@@ -1,0 +1,35 @@
+.example-card {
+    width: 40rem;
+}
+
+/* flex-wrap é otimo para conseguir deixar o site mais finamico*/
+.clear {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+mat-card {
+    margin-right: 0.3rem;
+    margin-bottom: 0.3rem;
+}
+
+mat-card img {
+    float: right;
+    width: 19rem;
+}
+/* Caso tirar o both o texto ira para o lado da imagem!*/
+mat-card-content {
+    clear: both;
+}
+
+mat-card-content p {
+    font-size: var(--font-title-size);
+    word-wrap: break-word;
+}
+
+mat-card-actions {
+    position: relative;
+    float: inline-end;
+}

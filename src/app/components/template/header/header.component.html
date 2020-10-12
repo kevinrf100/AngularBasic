@@ -1,13 +1,19 @@
 <mat-toolbar class="header mat-elevation-z4">
     <span>
-        <a>
+        <div class="logoBar">
             <img class="logo" src="assets/img/logo.png" alt="logo" routerLink="/">
-        </a>
+        </div>
     </span>
     <span class="title-group">
-        <a routerLink="{{routeURL}}">
-            <i class="material-icons">{{icon}}</i>
-            {{title}}
-        </a>
+        <div class="profileImage">
+            <img src="https://avatars0.githubusercontent.com/u/30449737?s=400&u=d223cc5659f82426474715be183fedf5eb93408e&v=4" alt="Kevin Rossetti Fernandes">
+        </div>
+        <div class="infos">
+            <a routerLink="{{routeURL}}">
+                <i class="material-icons">{{icon}}</i>
+                {{title}}
+            </a>
+            <a>Tipo: Adiministrador</a>
+        </div>
     </span>
 </mat-toolbar>

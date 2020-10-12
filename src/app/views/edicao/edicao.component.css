@@ -1,0 +1,30 @@
+.form-field-material {
+    border: 1px solid var(--border-gray-color);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    width: auto;
+}
+
+.title {
+    margin: -0.7rem 0 0 1rem;
+    position: absolute;
+    z-index: 20;
+    background-color: var(--background-color);
+    font: var(--font-title-size) bold var(--font-black-color);
+}
+
+mat-card {
+    margin-bottom: 0.2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+mat-card mat-card-title{
+    word-wrap: break-word;
+}
+
+input {
+    max-width: 100%;
+}

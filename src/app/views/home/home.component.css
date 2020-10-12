@@ -9,3 +9,14 @@
     margin-top: 1.2rem;
     font-size: 1.1rem;
 }
+
+
+.center {
+    width: 20rem;
+    height: 20rem;
+    /* centralizar o texto! utilizando margin auto no left e right*/
+    margin: 20rem auto auto auto;
+    text-align: center;
+    position: relative;
+    overflow: auto;
+}
